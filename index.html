@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PartyNest — Find & Compare Event Venues, Catering, DJs & Party Vendors in Canada</title>
+<meta name="description" content="Compare event venues, catering, DJs, photographers, decorations, entertainers, and party rental vendors across Canada. Free value scores, budget planning, and side-by-side vendor comparison.">
+<meta name="keywords" content="event vendors Canada, compare venues, party planning, catering near me, DJ hire, wedding photographer, event planning Ontario, birthday party venues, corporate event vendors, party rentals Canada">
+<meta name="author" content="NestGroup Inc.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#6B46C1">
+<link rel="canonical" href="https://partynest.ca/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PartyNest by NestGroup">
+<meta property="og:title" content="PartyNest — Find & Compare Event Venues & Party Vendors in Canada">
+<meta property="og:description" content="Compare venues, catering, DJs, photographers, and party vendors by cost, distance, and value score. Free budget planner for Canadian event planning.">
+<meta property="og:url" content="https://partynest.ca/">
+<meta property="og:locale" content="en_CA">
+<meta property="og:image" content="https://partynest.ca/images/og-partynest.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PartyNest — Compare Event Venues & Party Vendors in Canada">
+<meta name="twitter:description" content="Find venues, catering, DJs, photographers, and party rentals near you. Free value scores and budget planning tools.">
+<meta name="twitter:image" content="https://partynest.ca/images/og-partynest.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PartyNest",
+  "url": "https://partynest.ca",
+  "description": "Find and compare event venues, catering, entertainment, photography, and party rental vendors across Canada.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NestGroup",
+    "url": "https://nestgroup.ca"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://partynest.ca/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Event & Party Vendors in Canada",
+  "description": "Event venues, catering, entertainment, and party service providers across Canada",
+  "itemListOrder": "https://schema.org/ItemListUnordered",
+  "numberOfItems": 44,
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "item": {"@type": "EventVenue", "name": "Event Venues & Banquet Halls"}},
+    {"@type": "ListItem", "position": 2, "item": {"@type": "FoodEstablishment", "name": "Catering Services"}},
+    {"@type": "ListItem", "position": 3, "item": {"@type": "EntertainmentBusiness", "name": "DJs, Musicians & Entertainers"}},
+    {"@type": "ListItem", "position": 4, "item": {"@type": "ProfessionalService", "name": "Photographers & Videographers"}}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #6B46C1;
+    --primary-light: #9F7AEA;
+    --primary-dark: #553C9A;
+    --accent: #ED8936;
+    --accent-light: #F6AD55;
+    --teal: #38B2AC;
+    --teal-light: #81E6D9;
+    --bg: #FAFAFE;
+    --surface: #FFFFFF;
+    --text: #2D3748;
+    --text-muted: #718096;
+    --border: #E2E8F0;
+    --score-high: #38A169;
+    --score-med: #D69E2E;
+    --score-low: #E53E3E;
+    --shadow: 0 2px 12px rgba(107,70,193,0.10);
+    --shadow-lg: 0 8px 32px rgba(107,70,193,0.15);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --font: 'Nunito', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: var(--font); cursor: pointer; border: none; outline: none; }
+  input, select { font-family: var(--font); }
+
+  /* NAV */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--surface);
+    box-shadow: 0 2px 8px rgba(107,70,193,0.10);
+    display: flex; align-items: center; gap: 8px;
+    padding: 0 24px; height: 60px;
+  }
+  .nav-logo { font-size: 1.45rem; font-weight: 900; margin-right: 8px; white-space: nowrap; }
+  .nav-logo .party { color: var(--accent); }
+  .nav-logo .nest { color: var(--primary); }
+  .nav-tabs { display: flex; gap: 4px; flex: 1; }
+  .nav-tab {
+    padding: 7px 18px; border-radius: 20px; font-size: 0.875rem; font-weight: 700;
+    color: var(--text-muted); background: transparent; transition: all 0.2s;
+  }
+  .nav-tab:hover { background: #F3EFF9; color: var(--primary); }
+  .nav-tab.active { background: var(--primary); color: #fff; }
+  .nav-spacer { flex: 1; }
+  .nav-ig {
+    display: flex; align-items: center; gap: 6px;
+    padding: 7px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;
+    color: var(--primary); background: #F3EFF9; transition: all 0.2s;
+  }
+  .nav-ig:hover { background: var(--primary); color: #fff; }
+  .nav-signup {
+    padding: 8px 20px; border-radius: 20px; font-size: 0.875rem; font-weight: 800;
+    background: var(--accent); color: #fff; transition: all 0.2s;
+  }
+  .nav-signup:hover { background: #DD6B20; }
+  .nav-links { display: flex; align-items: center; gap: 8px; flex: 1; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 40%, #ED8936 100%);
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.4rem; font-weight: 900; color: #fff; margin-bottom: 8px; line-height: 1.2; }
+  .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.88); margin-bottom: 28px; }
+  .smart-search-wrap { position: relative; max-width: 600px; margin: 0 auto 20px; }
+  .smart-search-input {
+    width: 100%; padding: 16px 56px 16px 20px; border-radius: 32px; border: none;
+    font-size: 1rem; font-family: var(--font); font-weight: 600;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    outline: none;
+  }
+  .smart-search-btn {
+    position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+    background: var(--accent); color: #fff; border: none; border-radius: 24px;
+    padding: 9px 18px; font-size: 0.9rem; font-weight: 800; cursor: pointer;
+  }
+  .suggestions-dropdown {
+    position: absolute; top: 110%; left: 0; right: 0; background: #fff;
+    border-radius: var(--radius); box-shadow: var(--shadow-lg); z-index: 50;
+    overflow: hidden; display: none;
+  }
+  .suggestions-dropdown.show { display: block; }
+  .suggestion-item {
+    padding: 10px 18px; cursor: pointer; font-size: 0.9rem; font-weight: 600;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .suggestion-item:hover { background: #F3EFF9; color: var(--primary); }
+  .quick-links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+  .quick-link {
+    padding: 7px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700;
+    background: rgba(255,255,255,0.20); color: #fff; border: 1.5px solid rgba(255,255,255,0.40);
+    cursor: pointer; transition: all 0.2s;
+  }
+  .quick-link:hover { background: rgba(255,255,255,0.35); }
+
+  /* SEARCH VIEW */
+  #searchView { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+  #compareView, #plannerView { display: none; max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* ADVANCED SEARCH BOX */
+  .search-box {
+    background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 20px 24px; margin-bottom: 20px; border: 1px solid var(--border);
+  }
+  .search-box-title { font-size: 0.85rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; }
+  .search-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+  .search-row-2 { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+  .search-field { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 120px; }
+  .search-field label { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .search-field input, .search-field select {
+    padding: 9px 12px; border-radius: var(--radius-sm); border: 1.5px solid var(--border);
+    font-size: 0.9rem; font-weight: 600; background: var(--bg); color: var(--text);
+    transition: border 0.2s;
+  }
+  .search-field input:focus, .search-field select:focus { border-color: var(--primary); outline: none; }
+  .search-field .range-val { font-size: 0.8rem; font-weight: 700; color: var(--primary); margin-top: 2px; }
+  .search-field input[type=range] { padding: 4px 0; accent-color: var(--primary); }
+  .search-btn {
+    padding: 10px 28px; border-radius: 24px; font-size: 0.95rem; font-weight: 800;
+    background: var(--primary); color: #fff; cursor: pointer; transition: all 0.2s;
+    white-space: nowrap; align-self: flex-end;
+  }
+  .search-btn:hover { background: var(--primary-dark); }
+
+  /* INTEREST / CATEGORY PICKER */
+  .interest-section { margin-bottom: 20px; }
+  .interest-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .interest-title { font-size: 1rem; font-weight: 800; color: var(--text); }
+  .compare-interests-btn {
+    padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; font-weight: 800;
+    background: var(--teal); color: #fff; cursor: pointer; transition: all 0.2s;
+    display: none;
+  }
+  .compare-interests-btn.show { display: block; }
+  .compare-interests-btn:hover { background: #2C7A7B; }
+  .cat-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cat-item {
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: 20px; font-size: 0.875rem; font-weight: 700;
+    background: var(--bg); border: 2px solid var(--border); cursor: pointer; transition: all 0.2s;
+  }
+  .cat-item:hover { border-color: var(--primary-light); background: #F3EFF9; }
+  .cat-item.selected { border-color: var(--primary); background: #F3EFF9; color: var(--primary); }
+  .cat-item.selected .cat-emoji { transform: scale(1.2); }
+  .cat-emoji { font-size: 1.1rem; }
+
+  /* BUDGET SLIDER */
+  .budget-section { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 20px; margin-bottom: 20px; border: 1px solid var(--border); }
+  .budget-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .budget-title { font-size: 0.95rem; font-weight: 800; color: var(--text); }
+  .budget-amount { font-size: 1.1rem; font-weight: 900; color: var(--accent); }
+  .budget-control { display: flex; align-items: center; gap: 12px; }
+  .budget-control input[type=range] { flex: 1; accent-color: var(--accent); height: 6px; }
+  .budget-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; margin-top: 4px; }
+
+  /* STATS BAR */
+  .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+  .stat-card {
+    background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 16px 20px; text-align: center; border: 1px solid var(--border);
+  }
+  .stat-num { font-size: 1.6rem; font-weight: 900; color: var(--primary); line-height: 1; }
+  .stat-label { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  /* SORT BAR */
+  .sort-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .sort-bar label { font-size: 0.85rem; font-weight: 700; color: var(--text-muted); }
+  .sort-bar select { padding: 7px 12px; border-radius: var(--radius-sm); border: 1.5px solid var(--border); font-size: 0.875rem; font-weight: 600; background: var(--surface); color: var(--text); }
+  .result-count { font-size: 0.875rem; font-weight: 700; color: var(--text-muted); margin-left: auto; }
+
+  /* VENDOR CARDS */
+  .cards-grid { display: flex; flex-direction: column; gap: 14px; }
+  .vendor-card {
+    background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow);
+    border: 1px solid var(--border); display: grid;
+    grid-template-columns: 160px 1fr auto;
+    overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; cursor: pointer;
+  }
+  .vendor-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+  .card-image {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem; min-height: 130px;
+    background: linear-gradient(135deg, #F3EFF9 0%, #EDE9F8 100%);
+  }
+  .card-body { padding: 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+  .card-name { font-size: 1.1rem; font-weight: 900; color: var(--text); }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .card-tag {
+    padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700;
+    background: #F3EFF9; color: var(--primary);
+  }
+  .card-tag.cat { background: #FEF3C7; color: #92400E; }
+  .card-meta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .card-meta-item { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+  .card-avail { display: inline-flex; align-items: center; gap: 4px; font-size: 0.8rem; font-weight: 700; }
+  .avail-dot { width: 7px; height: 7px; border-radius: 50%; background: #38A169; }
+  .avail-dot.busy { background: #E53E3E; }
+  .card-right { padding: 16px 20px; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; min-width: 140px; }
+  .value-score-circle {
+    width: 52px; height: 52px; border-radius: 50%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; font-weight: 900; font-size: 1rem;
+    border: 3px solid;
+  }
+  .value-score-circle .score-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; line-height: 1; }
+  .score-high { border-color: var(--score-high); color: var(--score-high); background: #F0FFF4; }
+  .score-med { border-color: var(--score-med); color: var(--score-med); background: #FFFFF0; }
+  .score-low { border-color: var(--score-low); color: var(--score-low); background: #FFF5F5; }
+  .card-price { font-size: 1.15rem; font-weight: 900; color: var(--text); text-align: right; }
+  .card-price-sub { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); }
+  .card-distance { font-size: 0.82rem; font-weight: 700; color: var(--teal); }
+  .card-compare-wrap { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+  .card-compare-wrap label { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); cursor: pointer; }
+  .card-compare-wrap input[type=checkbox] { accent-color: var(--primary); width: 14px; height: 14px; }
+
+  /* COMPARE BAR */
+  .compare-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+    background: var(--primary); color: #fff;
+    padding: 12px 24px; display: none; align-items: center; gap: 16px;
+    box-shadow: 0 -4px 16px rgba(107,70,193,0.25);
+  }
+  .compare-bar.show { display: flex; }
+  .compare-bar-items { display: flex; gap: 10px; flex: 1; flex-wrap: wrap; }
+  .compare-bar-item {
+    background: rgba(255,255,255,0.15); border-radius: var(--radius-sm);
+    padding: 6px 12px; font-size: 0.82rem; font-weight: 700;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .compare-bar-remove { cursor: pointer; font-size: 1rem; line-height: 1; opacity: 0.8; }
+  .compare-bar-remove:hover { opacity: 1; }
+  .compare-bar-btn {
+    padding: 9px 24px; border-radius: 20px; font-size: 0.9rem; font-weight: 800;
+    background: var(--accent); color: #fff; cursor: pointer; white-space: nowrap;
+  }
+  .compare-bar-btn:hover { background: #DD6B20; }
+  .compare-bar-clear { padding: 9px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; background: rgba(255,255,255,0.15); color: #fff; cursor: pointer; }
+
+  /* COMPARE VIEW */
+  #compareView .compare-back { margin-bottom: 16px; }
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 18px; border-radius: 20px; font-size: 0.875rem; font-weight: 700;
+    background: var(--bg); border: 1.5px solid var(--border); color: var(--text); cursor: pointer;
+  }
+  .back-btn:hover { border-color: var(--primary); color: var(--primary); }
+  .compare-title { font-size: 1.5rem; font-weight: 900; margin-bottom: 20px; }
+  .compare-table-wrap { overflow-x: auto; }
+  .compare-table { width: 100%; border-collapse: collapse; }
+  .compare-table th, .compare-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
+  .compare-table thead th { background: var(--primary); color: #fff; font-weight: 800; }
+  .compare-table thead th:first-child { background: var(--bg); color: var(--text-muted); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; }
+  .compare-table tbody tr:nth-child(even) td { background: #F9F7FD; }
+  .compare-table tbody tr:hover td { background: #F3EFF9; }
+  .compare-table .row-label { font-weight: 800; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .compare-table .best { color: var(--score-high); font-weight: 900; }
+
+  /* DETAIL MODAL */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(45,55,72,0.6);
+    z-index: 300; display: none; align-items: center; justify-content: center; padding: 16px;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: var(--surface); border-radius: 16px; max-width: 640px; width: 100%;
+    max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  }
+  .modal-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    padding: 24px 24px 0; gap: 12px;
+  }
+  .modal-emoji { font-size: 3rem; line-height: 1; }
+  .modal-title-group { flex: 1; }
+  .modal-name { font-size: 1.4rem; font-weight: 900; }
+  .modal-provider { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); margin-top: 2px; }
+  .modal-close { font-size: 1.4rem; cursor: pointer; color: var(--text-muted); line-height: 1; padding: 4px; }
+  .modal-close:hover { color: var(--text); }
+  .modal-body { padding: 20px 24px 24px; }
+  .modal-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+  .modal-info-item { background: var(--bg); border-radius: var(--radius-sm); padding: 10px 14px; }
+  .modal-info-label { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
+  .modal-info-val { font-size: 0.95rem; font-weight: 800; color: var(--text); }
+  .modal-score-section { margin-bottom: 20px; }
+  .modal-score-title { font-size: 0.95rem; font-weight: 800; margin-bottom: 10px; color: var(--text); }
+  .score-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .score-bar-label { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); min-width: 90px; }
+  .score-bar-track { flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+  .score-bar-fill { height: 100%; border-radius: 4px; background: var(--primary); transition: width 0.5s ease; }
+  .score-bar-val { font-size: 0.8rem; font-weight: 800; color: var(--text); min-width: 30px; text-align: right; }
+  .modal-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+  .modal-footer { display: flex; gap: 10px; }
+  .modal-visit-btn {
+    flex: 1; padding: 12px; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 800;
+    background: var(--primary); color: #fff; text-align: center; cursor: pointer;
+  }
+  .modal-visit-btn:hover { background: var(--primary-dark); }
+  .modal-plan-btn {
+    padding: 12px 20px; border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 800;
+    background: var(--accent); color: #fff; cursor: pointer;
+  }
+  .modal-plan-btn:hover { background: #DD6B20; }
+
+  /* BUDGET PLANNER */
+  #plannerView .planner-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  .planner-title { font-size: 1.5rem; font-weight: 900; }
+  .planner-top { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .planner-card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; border: 1px solid var(--border); }
+  .planner-card-title { font-size: 0.9rem; font-weight: 800; color: var(--text); margin-bottom: 14px; }
+  .event-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .event-tab {
+    padding: 7px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;
+    background: var(--bg); border: 1.5px solid var(--border); cursor: pointer; transition: all 0.2s;
+  }
+  .event-tab:hover { border-color: var(--primary); color: var(--primary); }
+  .event-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .event-tab-add {
+    padding: 7px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;
+    background: transparent; border: 1.5px dashed var(--border); cursor: pointer; color: var(--text-muted);
+    transition: all 0.2s;
+  }
+  .event-tab-add:hover { border-color: var(--accent); color: var(--accent); }
+  .budget-summary { display: flex; flex-direction: column; gap: 8px; }
+  .budget-summary-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .budget-summary-row:last-child { border-bottom: none; font-weight: 900; font-size: 1rem; }
+  .budget-summary-label { font-size: 0.88rem; font-weight: 600; color: var(--text-muted); }
+  .budget-summary-val { font-size: 0.95rem; font-weight: 800; color: var(--text); }
+  .budget-summary-val.over { color: var(--score-low); }
+  .budget-summary-val.under { color: var(--score-high); }
+  .chart-section { }
+  .chart-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .chart-bar-label { font-size: 0.82rem; font-weight: 700; color: var(--text-muted); min-width: 100px; text-align: right; }
+  .chart-bar-track { flex: 1; height: 22px; background: var(--bg); border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
+  .chart-bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 8px; font-size: 0.78rem; font-weight: 700; color: #fff; transition: width 0.5s ease; }
+  .chart-bar-val { font-size: 0.8rem; font-weight: 800; color: var(--text); min-width: 60px; }
+  .planner-bottom { }
+  .planner-vendors-title { font-size: 1rem; font-weight: 800; margin-bottom: 12px; }
+  .planned-vendor-row {
+    background: var(--surface); border-radius: var(--radius-sm); border: 1px solid var(--border);
+    padding: 12px 16px; display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+  }
+  .planned-vendor-emoji { font-size: 1.6rem; }
+  .planned-vendor-info { flex: 1; }
+  .planned-vendor-name { font-size: 0.92rem; font-weight: 800; }
+  .planned-vendor-cat { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
+  .planned-vendor-price { font-size: 0.95rem; font-weight: 900; color: var(--primary); }
+  .planned-vendor-remove { font-size: 1.1rem; color: var(--text-muted); cursor: pointer; }
+  .planned-vendor-remove:hover { color: var(--score-low); }
+  .planner-empty { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.95rem; font-weight: 600; }
+
+  /* HAMBURGER MENU */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 200;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background: var(--gray-700);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  @media (max-width: 1024px) {
+    .search-row { grid-template-columns: 1fr 1fr; }
+    .search-row-2 { grid-template-columns: 1fr 1fr; }
+    .stats-bar { grid-template-columns: 1fr 1fr 1fr; }
+    .hero h1 { font-size: 32px; }
+  }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      flex-direction: column;
+      padding: 24px;
+      gap: 16px;
+      z-index: 150;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      overflow-y: auto;
+    }
+    .nav-links.mobile-open { display: flex; }
+    .nav-links a { font-size: 18px; padding: 12px 0; border-bottom: 1px solid var(--gray-200); }
+    .nav-btn { width: 100%; text-align: center; padding: 14px; font-size: 16px; margin-top: 8px; }
+    .hero { padding: 40px 16px; }
+    .hero h1 { font-size: 26px; }
+    .hero p { font-size: 14px; }
+    .hero-quick-links { gap: 8px; }
+    .quick-link { font-size: 12px; padding: 6px 10px; }
+    .search-box { margin: 16px; padding: 16px; }
+    .search-row { grid-template-columns: 1fr; gap: 10px; }
+    .search-row-2 { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .search-field select, .search-field input { font-size: 16px; padding: 10px; min-height: 44px; }
+    .search-field button { min-height: 44px; font-size: 14px; }
+    .provider-card { grid-template-columns: 1fr; margin: 0 16px; }
+    .provider-image { width: 100%; height: 120px; border-radius: 10px 10px 0 0; }
+    .provider-right { flex-direction: row; align-items: center; min-width: auto; padding: 12px 16px; gap: 8px; }
+    .provider-info h3 { font-size: 16px; }
+    .stats-bar { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .detail-grid { grid-template-columns: 1fr; }
+    .modal-content { width: 95%; max-height: 90vh; margin: 5vh auto; padding: 20px; }
+    .planner-top, .planner-bottom { grid-template-columns: 1fr; }
+    .compare-bar { flex-direction: column; padding: 12px 16px; gap: 8px; }
+    .compare-bar-left { flex-wrap: wrap; }
+    .compare-bar-items { flex-wrap: wrap; }
+    .compare-table { font-size: 13px; }
+    .compare-table th, .compare-table td { padding: 8px 6px; }
+    .smart-search-input { font-size: 16px; }
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 0 12px; }
+    .logo-text { font-size: 18px; }
+    .hero h1 { font-size: 22px; }
+    .hero p { font-size: 13px; }
+    .hero-quick-links { justify-content: center; }
+    .search-row-2 { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: 1fr; }
+    .provider-right { flex-direction: column; }
+    .modal-content { width: 100%; max-height: 100vh; margin: 0; border-radius: 0; }
+    .compare-table { display: block; overflow-x: auto; }
+  }
+
+  /* NO RESULTS */
+  .no-results { text-align: center; padding: 60px 20px; color: var(--text-muted); }
+  .no-results .nr-emoji { font-size: 3rem; margin-bottom: 12px; }
+  .no-results h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 6px; color: var(--text); }
+
+  /* LOADING */
+  .loading { text-align: center; padding: 40px; color: var(--text-muted); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo"><span class="party">Party</span><span class="nest">Nest</span></div>
+  <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showSearch()">🔍 <span>Find Vendors</span></button>
+      <button class="nav-tab" onclick="showCompare()" id="compareTab">⚖️ <span>Compare</span></button>
+      <button class="nav-tab" onclick="showPlanner()" id="plannerTab">💰 <span>Budget Planner</span></button>
+    </div>
+    <div class="nav-spacer"></div>
+    <a href="https://www.instagram.com/partynestca" target="_blank" class="nav-ig">📸 Instagram</a>
+    <button class="nav-signup">Sign Up</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="heroSection">
+  <h1>Find Your Perfect Party Vendors 🎉</h1>
+  <p>Discover top-rated venues, caterers, entertainers & more for any event</p>
+  <div class="smart-search-wrap">
+    <input type="text" class="smart-search-input" id="smartSearch" placeholder="Search venues, DJs, photographers, catering..." autocomplete="off" oninput="handleSmartSearch(this.value)" onfocus="handleSmartSearch(this.value)" onblur="setTimeout(()=>closeSuggestions(),200)">
+    <button class="smart-search-btn" onclick="applySmartSearch()">Search</button>
+    <div class="suggestions-dropdown" id="suggestionsDropdown"></div>
+  </div>
+  <div class="quick-links">
+    <button class="quick-link" onclick="quickFilter('venue')">🏛️ Venues</button>
+    <button class="quick-link" onclick="quickFilter('catering')">🍽️ Catering</button>
+    <button class="quick-link" onclick="quickFilter('dj')">🎵 DJs & Music</button>
+    <button class="quick-link" onclick="quickFilter('photography')">📷 Photographers</button>
+    <button class="quick-link" onclick="quickFilter('decorations')">🎨 Decorations</button>
+    <button class="quick-link" onclick="quickFilter('entertainment')">🎪 Entertainers</button>
+    <button class="quick-link" onclick="quickFilter('cakes')">🎂 Cake & Desserts</button>
+    <button class="quick-link" onclick="quickFilter('rentals')">🎈 Rentals</button>
+  </div>
+</div>
+
+<!-- SEARCH VIEW -->
+<div id="searchView">
+  <!-- ADVANCED SEARCH -->
+  <div class="search-box">
+    <div class="search-box-title">🔎 Advanced Search</div>
+    <div class="search-row">
+      <div class="search-field">
+        <label>Postal Code</label>
+        <input type="text" id="postalCode" placeholder="e.g. M5V 2T6" maxlength="7">
+      </div>
+      <div class="search-field">
+        <label>Event Type</label>
+        <select id="eventType">
+          <option value="">All Events</option>
+          <option value="Birthday">Birthday Party</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Corporate">Corporate Event</option>
+          <option value="Baby Shower">Baby Shower</option>
+          <option value="Anniversary">Anniversary</option>
+          <option value="Graduation">Graduation</option>
+          <option value="Holiday">Holiday Party</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label>Guest Count</label>
+        <input type="range" id="guestCount" min="10" max="500" value="100" oninput="document.getElementById('guestCountVal').textContent=this.value+' guests'">
+        <div class="range-val" id="guestCountVal">100 guests</div>
+      </div>
+      <div class="search-field">
+        <label>Province / City</label>
+        <select id="cityFilter">
+          <option value="">All Cities</option>
+          <option value="Toronto">Toronto, ON</option>
+          <option value="Ottawa">Ottawa, ON</option>
+          <option value="Kingston">Kingston, ON</option>
+          <option value="Montreal">Montreal, QC</option>
+        </select>
+      </div>
+    </div>
+    <div class="search-row-2">
+      <div class="search-field">
+        <label>Search Radius (km)</label>
+        <input type="range" id="radiusFilter" min="5" max="100" value="50" oninput="document.getElementById('radiusVal').textContent=this.value+' km'">
+        <div class="range-val" id="radiusVal">50 km</div>
+      </div>
+      <div class="search-field">
+        <label>Event Date</label>
+        <input type="date" id="eventDate">
+      </div>
+      <button class="search-btn" onclick="filterVendors()">Search Vendors</button>
+    </div>
+  </div>
+
+  <!-- CATEGORY PICKER -->
+  <div class="interest-section">
+    <div class="interest-header">
+      <div class="interest-title">Filter by Category</div>
+      <button class="compare-interests-btn" id="compareInterestsBtn" onclick="compareSelected()">⚖️ Compare Selected</button>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+
+  <!-- BUDGET SLIDER -->
+  <div class="budget-section">
+    <div class="budget-header">
+      <div class="budget-title">💰 Max Event Budget</div>
+      <div class="budget-amount" id="budgetDisplay">$5,000</div>
+    </div>
+    <div class="budget-control">
+      <span style="font-size:0.8rem;font-weight:700;color:var(--text-muted)">$0</span>
+      <input type="range" id="budgetSlider" min="0" max="10000" step="100" value="5000" oninput="updateBudget(this.value)">
+      <span style="font-size:0.8rem;font-weight:700;color:var(--text-muted)">$10k</span>
+    </div>
+    <div class="budget-labels"><span>Free</span><span>$2,500</span><span>$5,000</span><span>$7,500</span><span>$10,000</span></div>
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-card"><div class="stat-num" id="statVendors">0</div><div class="stat-label">Vendors Found</div></div>
+    <div class="stat-card"><div class="stat-num" id="statAvgCost">—</div><div class="stat-label">Avg Starting Price</div></div>
+    <div class="stat-card"><div class="stat-num" id="statAvgDist">—</div><div class="stat-label">Avg Distance</div></div>
+    <div class="stat-card"><div class="stat-num" id="statBestVal">—</div><div class="stat-label">Best Value Score</div></div>
+  </div>
+
+  <!-- SORT BAR -->
+  <div class="sort-bar">
+    <label>Sort by:</label>
+    <select id="sortSelect" onchange="sortAndRender()">
+      <option value="value">Best Value Score</option>
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+      <option value="distance">Nearest First</option>
+      <option value="rating">Highest Rated</option>
+    </select>
+    <span class="result-count" id="resultCount">0 results</span>
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards-grid" id="cardsGrid">
+    <div class="loading">Loading vendors...</div>
+  </div>
+</div>
+
+<!-- COMPARE VIEW -->
+<div id="compareView">
+  <div class="compare-back">
+    <button class="back-btn" onclick="showSearch()">← Back to Search</button>
+  </div>
+  <div class="compare-title">⚖️ Vendor Comparison</div>
+  <div class="compare-table-wrap" id="compareTableWrap"></div>
+</div>
+
+<!-- PLANNER VIEW -->
+<div id="plannerView">
+  <div class="planner-header">
+    <div class="planner-title">💰 Budget Planner</div>
+    <button class="back-btn" onclick="showSearch()">← Back to Search</button>
+  </div>
+  <div class="planner-top">
+    <div class="planner-card">
+      <div class="planner-card-title">📅 My Events</div>
+      <div class="event-tabs" id="eventTabs"></div>
+      <div class="budget-summary" id="budgetSummary"></div>
+    </div>
+    <div class="planner-card">
+      <div class="planner-card-title">📊 Spending by Category</div>
+      <div id="categoryChart"></div>
+    </div>
+  </div>
+  <div class="planner-bottom">
+    <div class="planner-vendors-title">📋 Planned Vendors</div>
+    <div id="plannedVendorsList"></div>
+  </div>
+</div>
+
+<!-- COMPARE BAR -->
+<div class="compare-bar" id="compareBarEl">
+  <div class="compare-bar-items" id="compareBarItems"></div>
+  <button class="compare-bar-btn" onclick="showCompare()">Compare Now</button>
+  <button class="compare-bar-clear" onclick="clearCompare()">Clear All</button>
+</div>
+
+<!-- DETAIL MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="modal-emoji" id="modalEmoji"></div>
+      <div class="modal-title-group">
+        <div class="modal-name" id="modalName"></div>
+        <div class="modal-provider" id="modalProvider"></div>
+      </div>
+      <div class="modal-close" onclick="closeModal()">✕</div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-info-grid" id="modalInfoGrid"></div>
+      <div class="modal-score-section">
+        <div class="modal-score-title">Value Score Breakdown</div>
+        <div id="modalScoreBars"></div>
+      </div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-footer">
+        <a class="modal-visit-btn" id="modalVisitBtn" href="#" target="_blank">🌐 Visit Website</a>
+        <button class="modal-plan-btn" id="modalPlanBtn" onclick="addToPlanner()">+ Add to Planner</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+const vendors = [
+  // ---- VENUES - TORONTO ----
+  {
+    id: 'v1', name: 'The Bubble', provider: 'The Bubble Party Venue',
+    category: 'venue', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://the-bubble.com/parties',
+    hours: 'Weekends 10am-8pm', pricePerEvent: 800, priceDisplay: '$800',
+    commuteMins: 20, commuteKm: 12, rating: 4.7, ratingCount: 118,
+    emoji: '🫧', color: '#9F7AEA',
+    guestCountMin: 10, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Unique bubble-themed party venue offering an unforgettable experience for kids and adults alike. Includes setup, decorations, and party host.',
+    scoreBreakdown: { cost: 72, commute: 82, coverage: 85, rating: 94, extras: 80 }
+  },
+  {
+    id: 'v2', name: 'KartTown', provider: 'KartTown Racing & Events',
+    category: 'venue', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://karttown.ca/',
+    hours: 'Daily 10am-10pm', pricePerEvent: 600,  priceDisplay: '$600',
+    commuteMins: 25, commuteKm: 16, rating: 4.5, ratingCount: 203,
+    emoji: '🏎️', color: '#ED8936',
+    guestCountMin: 10, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Corporate', 'Graduation'],
+    availability: true,
+    description: 'High-octane karting parties for all ages. Packages include race time, pit area rental, and trophy for the birthday star.',
+    scoreBreakdown: { cost: 78, commute: 76, coverage: 80, rating: 90, extras: 85 }
+  },
+  {
+    id: 'v3', name: 'Playtime Bowl', provider: 'Playtime Bowl & Entertainment',
+    category: 'venue', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://playtimebowl.com/',
+    hours: 'Daily 11am-11pm', pricePerEvent: 450, priceDisplay: '$450',
+    commuteMins: 18, commuteKm: 10, rating: 4.3, ratingCount: 165,
+    emoji: '🎳', color: '#38B2AC',
+    guestCountMin: 10, guestCountMax: 40,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday'],
+    availability: true,
+    description: 'Bowling parties with dedicated lanes, party room, and food packages. Great for mixed age groups and corporate team building.',
+    scoreBreakdown: { cost: 85, commute: 85, coverage: 75, rating: 86, extras: 72 }
+  },
+  {
+    id: 'v4', name: 'The Creative Child', provider: 'The Creative Child Studio',
+    category: 'venue', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://www.thecreativechild.ca/',
+    hours: 'Weekends 9am-6pm', pricePerEvent: 520, priceDisplay: '$520',
+    commuteMins: 22, commuteKm: 14, rating: 4.8, ratingCount: 89,
+    emoji: '🎨', color: '#6B46C1',
+    guestCountMin: 8, guestCountMax: 25,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: true,
+    description: 'Arts and crafts party studio where kids create their own masterpieces. All materials included, plus a take-home art project for every guest.',
+    scoreBreakdown: { cost: 80, commute: 78, coverage: 90, rating: 96, extras: 88 }
+  },
+  {
+    id: 'v5', name: 'Kids Fun Town', provider: 'Kids Fun Town',
+    category: 'venue', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://kidsfuntown.ca/',
+    hours: 'Daily 10am-7pm', pricePerEvent: 550, priceDisplay: '$550',
+    commuteMins: 30, commuteKm: 20, rating: 4.4, ratingCount: 241,
+    emoji: '🏰', color: '#ED8936',
+    guestCountMin: 10, guestCountMax: 50,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: true,
+    description: 'Indoor play paradise with dedicated party rooms, unlimited play access, and customizable party packages for kids of all ages.',
+    scoreBreakdown: { cost: 80, commute: 70, coverage: 78, rating: 88, extras: 82 }
+  },
+  {
+    id: 'v6', name: 'K1 Speed Toronto', provider: 'K1 Speed',
+    category: 'venue', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://www.k1speed.ca/',
+    hours: 'Daily 10am-10pm', pricePerEvent: 900, priceDisplay: '$900',
+    commuteMins: 28, commuteKm: 18, rating: 4.6, ratingCount: 312,
+    emoji: '🏁', color: '#553C9A',
+    guestCountMin: 8, guestCountMax: 50,
+    eventTypes: ['Birthday', 'Corporate', 'Graduation'],
+    availability: false,
+    description: 'Professional-grade electric go-kart racing. Competitive packages with race results printout, dedicated event host, and catering options.',
+    scoreBreakdown: { cost: 62, commute: 73, coverage: 82, rating: 92, extras: 90 }
+  },
+
+  // ---- ENTERTAINMENT - TORONTO ----
+  {
+    id: 'e1', name: 'Kiddie Fun Clowns', provider: 'Kiddie Fun Clowns',
+    category: 'entertainment', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://kiddiefunclowns.ca/',
+    hours: 'By Appointment', pricePerEvent: 250, priceDisplay: '$250',
+    commuteMins: 15, commuteKm: 8, rating: 4.6, ratingCount: 74,
+    emoji: '🤡', color: '#ED8936',
+    guestCountMin: 5, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Baby Shower', 'Holiday'],
+    availability: true,
+    description: 'Professional clown entertainment including face painting, balloon animals, magic shows, and interactive games. 2-hour performance packages.',
+    scoreBreakdown: { cost: 92, commute: 88, coverage: 80, rating: 92, extras: 85 }
+  },
+  {
+    id: 'e2', name: 'KRM Entertainment', provider: 'KRM Children\'s Entertainment',
+    category: 'entertainment', city: 'Toronto', province: 'ON',
+    address: 'GTA, ON', url: 'https://rightchoicechildrensentertainment.com/',
+    hours: 'By Appointment', pricePerEvent: 300, priceDisplay: '$300',
+    commuteMins: 20, commuteKm: 12, rating: 4.7, ratingCount: 156,
+    emoji: '✨', color: '#9F7AEA',
+    guestCountMin: 10, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday'],
+    availability: true,
+    description: 'Full-service children\'s entertainment with themed shows, puppet performances, interactive games, and customizable party packages.',
+    scoreBreakdown: { cost: 88, commute: 82, coverage: 85, rating: 94, extras: 90 }
+  },
+  {
+    id: 'e3', name: 'Stage Entertainment', provider: 'Stage Entertainment Canada',
+    category: 'entertainment', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://www.stageentertainment.ca/',
+    hours: 'By Appointment', pricePerEvent: 450, priceDisplay: '$450',
+    commuteMins: 18, commuteKm: 10, rating: 4.8, ratingCount: 98,
+    emoji: '🎭', color: '#6B46C1',
+    guestCountMin: 20, guestCountMax: 200,
+    eventTypes: ['Birthday', 'Corporate', 'Graduation', 'Wedding'],
+    availability: true,
+    description: 'Professional theatrical entertainment company offering live performances, interactive shows, and themed experiences for corporate and private events.',
+    scoreBreakdown: { cost: 76, commute: 84, coverage: 92, rating: 96, extras: 88 }
+  },
+  {
+    id: 'e4', name: 'Twinkles the Clown', provider: 'Twinkles Entertainment',
+    category: 'entertainment', city: 'Toronto', province: 'ON',
+    address: 'GTA, ON', url: 'https://twinklestheclown.ca/',
+    hours: 'By Appointment', pricePerEvent: 200, priceDisplay: '$200',
+    commuteMins: 25, commuteKm: 15, rating: 4.4, ratingCount: 62,
+    emoji: '🌟', color: '#ED8936',
+    guestCountMin: 5, guestCountMax: 50,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: true,
+    description: 'Beloved local entertainer specializing in balloon twisting, face painting, and classic clown routines. Perfect for younger children.',
+    scoreBreakdown: { cost: 94, commute: 78, coverage: 75, rating: 88, extras: 78 }
+  },
+  {
+    id: 'e5', name: 'Golden Canadian Productions', provider: 'Golden Canadian Productions',
+    category: 'entertainment', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://goldencanadianproductions.com/',
+    hours: 'By Appointment', pricePerEvent: 600, priceDisplay: '$600',
+    commuteMins: 22, commuteKm: 13, rating: 4.9, ratingCount: 44,
+    emoji: '🎬', color: '#553C9A',
+    guestCountMin: 20, guestCountMax: 300,
+    eventTypes: ['Corporate', 'Wedding', 'Graduation', 'Holiday'],
+    availability: true,
+    description: 'Premium event production company specializing in AV setup, DJ services, lighting, and full event coordination for upscale gatherings.',
+    scoreBreakdown: { cost: 68, commute: 80, coverage: 95, rating: 98, extras: 95 }
+  },
+  {
+    id: 'e6', name: 'HokeyPokey Entertainment', provider: 'HokeyPokey Entertainment',
+    category: 'entertainment', city: 'Toronto', province: 'ON',
+    address: 'GTA, ON', url: 'https://hokeypokey.ca/',
+    hours: 'By Appointment', pricePerEvent: 280, priceDisplay: '$280',
+    commuteMins: 20, commuteKm: 11, rating: 4.5, ratingCount: 88,
+    emoji: '🎪', color: '#38B2AC',
+    guestCountMin: 5, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Baby Shower', 'Holiday'],
+    availability: true,
+    description: 'Interactive entertainment for children featuring songs, games, puppets, and high-energy shows that get all kids involved.',
+    scoreBreakdown: { cost: 90, commute: 83, coverage: 78, rating: 90, extras: 82 }
+  },
+  {
+    id: 'e7', name: 'Characters 4 Kids', provider: 'Characters 4 Kids',
+    category: 'entertainment', city: 'Toronto', province: 'ON',
+    address: 'GTA, ON', url: 'https://c4kids.weebly.com/',
+    hours: 'By Appointment', pricePerEvent: 350, priceDisplay: '$350',
+    commuteMins: 30, commuteKm: 18, rating: 4.3, ratingCount: 51,
+    emoji: '🦸', color: '#9F7AEA',
+    guestCountMin: 5, guestCountMax: 40,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: false,
+    description: 'Costume character visits featuring popular children\'s characters. Princesses, superheroes, and storybook characters for magical party moments.',
+    scoreBreakdown: { cost: 84, commute: 72, coverage: 72, rating: 86, extras: 80 }
+  },
+
+  // ---- RENTALS - TORONTO ----
+  {
+    id: 'r1', name: 'Bounce Events & Party Rentals', provider: 'Bounce Events',
+    category: 'rentals', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://bounceevents.ca/',
+    hours: 'Daily 8am-8pm', pricePerEvent: 350, priceDisplay: '$350',
+    commuteMins: 35, commuteKm: 22, rating: 4.5, ratingCount: 134,
+    emoji: '🏠', color: '#ED8936',
+    guestCountMin: 10, guestCountMax: 100,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday', 'Graduation'],
+    availability: true,
+    description: 'Full-service party rental company offering bouncy castles, tables, chairs, tents, and complete party setup. Delivery and pickup included.',
+    scoreBreakdown: { cost: 84, commute: 68, coverage: 82, rating: 90, extras: 88 }
+  },
+  {
+    id: 'r2', name: 'Ontario Inflatables', provider: 'Ontario Inflatables',
+    category: 'rentals', city: 'Toronto', province: 'ON',
+    address: 'GTA, ON', url: 'https://ontarioinflatables.com/',
+    hours: 'Daily 7am-9pm', pricePerEvent: 280, priceDisplay: '$280',
+    commuteMins: 40, commuteKm: 28, rating: 4.4, ratingCount: 97,
+    emoji: '🎈', color: '#6B46C1',
+    guestCountMin: 10, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday'],
+    availability: true,
+    description: 'Wide selection of inflatable rentals including bouncy castles, slides, obstacle courses, and interactive games. Clean, safe, and professionally maintained.',
+    scoreBreakdown: { cost: 88, commute: 62, coverage: 78, rating: 88, extras: 82 }
+  },
+  {
+    id: 'r3', name: 'PartyBox Entertainment', provider: 'PartyBox Entertainment',
+    category: 'rentals', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://partyboxto.com/',
+    hours: 'Daily 9am-7pm', pricePerEvent: 200, priceDisplay: '$200',
+    commuteMins: 20, commuteKm: 12, rating: 4.6, ratingCount: 78,
+    emoji: '📦', color: '#38B2AC',
+    guestCountMin: 5, guestCountMax: 50,
+    eventTypes: ['Birthday', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Curated party boxes with themed decorations, tableware, and party favors. Also offers photo booth rentals and party supply bundles.',
+    scoreBreakdown: { cost: 92, commute: 82, coverage: 75, rating: 92, extras: 86 }
+  },
+  {
+    id: 'r4', name: 'Fiesta Rentals', provider: 'Fiesta Rentals Canada',
+    category: 'rentals', city: 'Toronto', province: 'ON',
+    address: 'GTA, ON', url: 'https://fiestarentals.ca/',
+    hours: 'Daily 8am-6pm', pricePerEvent: 320, priceDisplay: '$320',
+    commuteMins: 35, commuteKm: 22, rating: 4.3, ratingCount: 112,
+    emoji: '🎉', color: '#ED8936',
+    guestCountMin: 15, guestCountMax: 150,
+    eventTypes: ['Birthday', 'Wedding', 'Corporate', 'Graduation'],
+    availability: true,
+    description: 'Event rental specialists with extensive inventory including linen, furniture, lighting, and specialty items for all occasions.',
+    scoreBreakdown: { cost: 86, commute: 68, coverage: 80, rating: 86, extras: 78 }
+  },
+  {
+    id: 'r5', name: 'Aero Inflatables', provider: 'Aero Inflatables',
+    category: 'rentals', city: 'Toronto', province: 'ON',
+    address: 'GTA, ON', url: 'https://aeroinflatables.com/',
+    hours: 'Daily 8am-8pm', pricePerEvent: 260, priceDisplay: '$260',
+    commuteMins: 38, commuteKm: 25, rating: 4.4, ratingCount: 86,
+    emoji: '🪂', color: '#9F7AEA',
+    guestCountMin: 10, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday'],
+    availability: true,
+    description: 'Premium inflatable rentals with a large fleet of themed bounce houses, water slides (summer), and carnival games.',
+    scoreBreakdown: { cost: 90, commute: 65, coverage: 76, rating: 88, extras: 80 }
+  },
+  {
+    id: 'r6', name: 'Castle Mania', provider: 'Castle Mania',
+    category: 'rentals', city: 'Toronto', province: 'ON',
+    address: 'GTA, ON', url: 'https://www.castlemania.ca/',
+    hours: 'Weekends 7am-9pm', pricePerEvent: 240, priceDisplay: '$240',
+    commuteMins: 42, commuteKm: 30, rating: 4.2, ratingCount: 68,
+    emoji: '🏰', color: '#553C9A',
+    guestCountMin: 5, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Holiday'],
+    availability: true,
+    description: 'Specializes in castle-themed bounce houses and party inflatables. Affordable weekend rentals with friendly service.',
+    scoreBreakdown: { cost: 92, commute: 60, coverage: 70, rating: 84, extras: 74 }
+  },
+  {
+    id: 'r7', name: 'Kiddies Fun Trak', provider: 'Kiddies Fun Trak',
+    category: 'rentals', city: 'Toronto', province: 'ON',
+    address: 'GTA, ON', url: 'https://kiddiesfuntrak.com/',
+    hours: 'By Appointment', pricePerEvent: 400, priceDisplay: '$400',
+    commuteMins: 45, commuteKm: 32, rating: 4.5, ratingCount: 44,
+    emoji: '🚂', color: '#38B2AC',
+    guestCountMin: 10, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: false,
+    description: 'Unique mini train track rental that creates a magical ride experience for young children at home or venue parties.',
+    scoreBreakdown: { cost: 80, commute: 58, coverage: 78, rating: 90, extras: 92 }
+  },
+
+  // ---- DECORATIONS / SUPPLIES - TORONTO ----
+  {
+    id: 'd1', name: 'Party City Canada', provider: 'Party City',
+    category: 'decorations', city: 'Toronto', province: 'ON',
+    address: 'Multiple Toronto Locations', url: 'https://www.partycity.ca/',
+    hours: 'Daily 9am-9pm', pricePerEvent: 150, priceDisplay: '$150',
+    commuteMins: 10, commuteKm: 5, rating: 4.0, ratingCount: 534,
+    emoji: '🎊', color: '#ED8936',
+    guestCountMin: 5, guestCountMax: 500,
+    eventTypes: ['Birthday', 'Wedding', 'Corporate', 'Baby Shower', 'Anniversary', 'Graduation', 'Holiday'],
+    availability: true,
+    description: 'Canada\'s largest party supply retailer with thousands of themed decorations, costumes, tableware, and balloon services for every occasion.',
+    scoreBreakdown: { cost: 95, commute: 94, coverage: 95, rating: 80, extras: 88 }
+  },
+  {
+    id: 'd2', name: 'Cutie Balloons', provider: 'Cutie Balloons',
+    category: 'decorations', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://www.cutieballoons.com/',
+    hours: 'By Appointment', pricePerEvent: 180, priceDisplay: '$180',
+    commuteMins: 18, commuteKm: 10, rating: 4.8, ratingCount: 156,
+    emoji: '🎈', color: '#9F7AEA',
+    guestCountMin: 5, guestCountMax: 200,
+    eventTypes: ['Birthday', 'Wedding', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Custom balloon arrangements, arches, columns, and organic balloon walls. Delivery and installation available for all event sizes.',
+    scoreBreakdown: { cost: 90, commute: 84, coverage: 88, rating: 96, extras: 90 }
+  },
+  {
+    id: 'd3', name: "Kerry's Party for Less", provider: "Kerry's Party for Less",
+    category: 'decorations', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://kerryspartyforless.com/',
+    hours: 'Tue-Sat 10am-6pm', pricePerEvent: 120, priceDisplay: '$120',
+    commuteMins: 22, commuteKm: 14, rating: 4.5, ratingCount: 88,
+    emoji: '🎁', color: '#6B46C1',
+    guestCountMin: 5, guestCountMax: 200,
+    eventTypes: ['Birthday', 'Baby Shower', 'Holiday', 'Anniversary'],
+    availability: true,
+    description: 'Budget-friendly party supplies store with an extensive selection of themed decorations, favours, and tableware. Great for DIY party planners.',
+    scoreBreakdown: { cost: 96, commute: 78, coverage: 85, rating: 90, extras: 80 }
+  },
+  {
+    id: 'd4', name: 'T.O. Balloons', provider: 'T.O. Balloons',
+    category: 'decorations', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://www.toballoons.com/',
+    hours: 'By Appointment', pricePerEvent: 220, priceDisplay: '$220',
+    commuteMins: 20, commuteKm: 12, rating: 4.7, ratingCount: 112,
+    emoji: '🪄', color: '#38B2AC',
+    guestCountMin: 5, guestCountMax: 300,
+    eventTypes: ['Birthday', 'Wedding', 'Corporate', 'Baby Shower', 'Anniversary', 'Graduation'],
+    availability: true,
+    description: 'Toronto\'s premier balloon décor studio specializing in elaborate balloon sculptures, letter balloons, and full venue decoration packages.',
+    scoreBreakdown: { cost: 88, commute: 82, coverage: 92, rating: 94, extras: 88 }
+  },
+  {
+    id: 'd5', name: 'Confetti My Party', provider: 'Confetti My Party',
+    category: 'decorations', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://www.confettimyparty.com/',
+    hours: 'By Appointment', pricePerEvent: 200, priceDisplay: '$200',
+    commuteMins: 15, commuteKm: 8, rating: 4.6, ratingCount: 94,
+    emoji: '✨', color: '#ED8936',
+    guestCountMin: 5, guestCountMax: 150,
+    eventTypes: ['Birthday', 'Baby Shower', 'Anniversary', 'Graduation'],
+    availability: true,
+    description: 'Styled party setups and backdrop installations. Specializes in boho, princess, unicorn, and custom themed party aesthetics.',
+    scoreBreakdown: { cost: 90, commute: 88, coverage: 85, rating: 92, extras: 86 }
+  },
+  {
+    id: 'd6', name: 'The Sweetest Thing Confection', provider: 'TSTC',
+    category: 'decorations', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://tstc.ca/',
+    hours: 'By Appointment', pricePerEvent: 250, priceDisplay: '$250',
+    commuteMins: 25, commuteKm: 16, rating: 4.9, ratingCount: 67,
+    emoji: '🍬', color: '#9F7AEA',
+    guestCountMin: 5, guestCountMax: 100,
+    eventTypes: ['Birthday', 'Wedding', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Custom candy buffets, dessert tables, and sweet treat displays. Transforms any event into a visually stunning confection experience.',
+    scoreBreakdown: { cost: 86, commute: 76, coverage: 90, rating: 98, extras: 94 }
+  },
+
+  // ---- CAKES & TREATS - TORONTO ----
+  {
+    id: 'c1', name: 'iCakes', provider: 'iCakes Bakery',
+    category: 'cakes', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://www.icakes.ca/',
+    hours: 'Tue-Sun 9am-6pm', pricePerEvent: 180, priceDisplay: 'from $180',
+    commuteMins: 15, commuteKm: 8, rating: 4.8, ratingCount: 234,
+    emoji: '🎂', color: '#ED8936',
+    guestCountMin: 5, guestCountMax: 200,
+    eventTypes: ['Birthday', 'Wedding', 'Baby Shower', 'Anniversary', 'Graduation'],
+    availability: true,
+    description: 'Custom cake design studio specializing in sculpted cakes, tiered wedding cakes, and themed birthday creations. Order 2-3 weeks in advance.',
+    scoreBreakdown: { cost: 88, commute: 88, coverage: 88, rating: 96, extras: 90 }
+  },
+  {
+    id: 'c2', name: 'Francesca Bakery', provider: 'Francesca Bakery',
+    category: 'cakes', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://francescabakery.com/',
+    hours: 'Mon-Sat 8am-6pm', pricePerEvent: 140, priceDisplay: 'from $140',
+    commuteMins: 20, commuteKm: 12, rating: 4.7, ratingCount: 188,
+    emoji: '🥐', color: '#6B46C1',
+    guestCountMin: 5, guestCountMax: 150,
+    eventTypes: ['Birthday', 'Wedding', 'Anniversary', 'Holiday'],
+    availability: true,
+    description: 'Italian-style bakery offering exquisite custom cakes, pastries, and dessert platters. Known for exceptional flavours and artistic fondant work.',
+    scoreBreakdown: { cost: 90, commute: 82, coverage: 85, rating: 94, extras: 86 }
+  },
+  {
+    id: 'c3', name: 'Le Dolci', provider: 'Le Dolci Baking Studio',
+    category: 'cakes', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://www.ledolci.com/',
+    hours: 'By Appointment', pricePerEvent: 200, priceDisplay: 'from $200',
+    commuteMins: 22, commuteKm: 14, rating: 4.9, ratingCount: 142,
+    emoji: '🧁', color: '#38B2AC',
+    guestCountMin: 5, guestCountMax: 100,
+    eventTypes: ['Birthday', 'Wedding', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Artisan baking studio offering custom cakes, cupcake towers, and baking party experiences. Featured in Toronto Life and CBC.',
+    scoreBreakdown: { cost: 85, commute: 80, coverage: 92, rating: 98, extras: 94 }
+  },
+  {
+    id: 'c4', name: 'Dessert Lady Café', provider: 'Dessert Lady Café',
+    category: 'cakes', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://dessertlady.ca/',
+    hours: 'Daily 10am-9pm', pricePerEvent: 120, priceDisplay: 'from $120',
+    commuteMins: 12, commuteKm: 6, rating: 4.5, ratingCount: 298,
+    emoji: '🍰', color: '#ED8936',
+    guestCountMin: 5, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Baby Shower', 'Anniversary', 'Holiday'],
+    availability: true,
+    description: 'Beloved Toronto dessert café with custom cakes, cheesecakes, and a full dessert catering menu. Walk-in and pre-order available.',
+    scoreBreakdown: { cost: 93, commute: 92, coverage: 80, rating: 90, extras: 82 }
+  },
+  {
+    id: 'c5', name: 'ShuCake Boutique', provider: 'ShuCake',
+    category: 'cakes', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://www.shucake.ca/',
+    hours: 'By Appointment', pricePerEvent: 260, priceDisplay: 'from $260',
+    commuteMins: 25, commuteKm: 16, rating: 4.9, ratingCount: 88,
+    emoji: '🌸', color: '#9F7AEA',
+    guestCountMin: 5, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Wedding', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Luxury custom cake boutique specializing in Korean-style decorating, painted cakes, and elegant tiered creations. Highly sought after.',
+    scoreBreakdown: { cost: 78, commute: 76, coverage: 90, rating: 98, extras: 96 }
+  },
+  {
+    id: 'c6', name: 'BB Cafe & Bake Boutique', provider: 'BB Cafe',
+    category: 'cakes', city: 'Toronto', province: 'ON',
+    address: 'Toronto, ON', url: 'https://bbcafe.ca/',
+    hours: 'Wed-Sun 10am-6pm', pricePerEvent: 160, priceDisplay: 'from $160',
+    commuteMins: 20, commuteKm: 12, rating: 4.6, ratingCount: 75,
+    emoji: '☕', color: '#553C9A',
+    guestCountMin: 5, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Chic café and custom cake boutique offering artisan cakes, dessert tables, and mini treat boxes. Aesthetic-forward designs for social media moments.',
+    scoreBreakdown: { cost: 89, commute: 82, coverage: 82, rating: 92, extras: 86 }
+  },
+
+  // ---- OTTAWA VENUES ----
+  {
+    id: 'ov1', name: 'Funhaven', provider: 'Funhaven Ottawa',
+    category: 'venue', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://www.funhaven.com/birthday-parties/',
+    hours: 'Daily 10am-8pm', pricePerEvent: 480, priceDisplay: '$480',
+    commuteMins: 20, commuteKm: 12, rating: 4.5, ratingCount: 312,
+    emoji: '🎡', color: '#6B46C1',
+    guestCountMin: 10, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: true,
+    description: 'Ottawa\'s largest family entertainment centre with arcade games, laser tag, mini golf, and dedicated party rooms with full catering packages.',
+    scoreBreakdown: { cost: 82, commute: 84, coverage: 85, rating: 90, extras: 88 }
+  },
+  {
+    id: 'ov2', name: 'Cosmic Adventures', provider: 'Cosmic Adventures',
+    category: 'venue', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://www.cosmicadventures.ca/',
+    hours: 'Daily 10am-6pm', pricePerEvent: 420, priceDisplay: '$420',
+    commuteMins: 25, commuteKm: 18, rating: 4.4, ratingCount: 245,
+    emoji: '🚀', color: '#38B2AC',
+    guestCountMin: 8, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: true,
+    description: 'Giant indoor soft play structure and cosmic-themed adventure venue. Party packages include unlimited play time and a dedicated party host.',
+    scoreBreakdown: { cost: 85, commute: 78, coverage: 80, rating: 88, extras: 82 }
+  },
+  {
+    id: 'ov3', name: 'Putting Edge Ottawa', provider: 'Putting Edge',
+    category: 'venue', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://www.puttingedge.com/',
+    hours: 'Daily 10am-10pm', pricePerEvent: 360, priceDisplay: '$360',
+    commuteMins: 18, commuteKm: 10, rating: 4.3, ratingCount: 178,
+    emoji: '⛳', color: '#ED8936',
+    guestCountMin: 8, guestCountMax: 40,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday'],
+    availability: true,
+    description: 'Glow-in-the-dark mini golf experience for all ages. Party packages include golf rounds, party room, and food & beverage options.',
+    scoreBreakdown: { cost: 88, commute: 86, coverage: 75, rating: 86, extras: 78 }
+  },
+  {
+    id: 'ov4', name: 'Art Haven', provider: 'Art Haven Studio',
+    category: 'venue', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://www.arthaven.ca/',
+    hours: 'Tue-Sun 10am-6pm', pricePerEvent: 320, priceDisplay: '$320',
+    commuteMins: 22, commuteKm: 14, rating: 4.7, ratingCount: 94,
+    emoji: '🖼️', color: '#9F7AEA',
+    guestCountMin: 6, guestCountMax: 20,
+    eventTypes: ['Birthday', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Creative art studio offering guided painting parties, pottery classes, and mixed-media workshops. A unique and memorable party experience.',
+    scoreBreakdown: { cost: 88, commute: 80, coverage: 88, rating: 94, extras: 86 }
+  },
+  {
+    id: 'ov5', name: 'Merivale Bowling', provider: 'Merivale Bowl',
+    category: 'venue', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://www.merivalebowl.com/',
+    hours: 'Daily 12pm-10pm', pricePerEvent: 280, priceDisplay: '$280',
+    commuteMins: 28, commuteKm: 20, rating: 4.2, ratingCount: 134,
+    emoji: '🎳', color: '#6B46C1',
+    guestCountMin: 8, guestCountMax: 40,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday'],
+    availability: true,
+    description: 'Classic bowling alley with modern party packages. Includes lane rental, shoe rental, and a reserved area for birthday celebrations.',
+    scoreBreakdown: { cost: 90, commute: 74, coverage: 72, rating: 84, extras: 74 }
+  },
+
+  // ---- KINGSTON VENUES ----
+  {
+    id: 'kv1', name: 'The Fun Zone', provider: 'The Fun Zone Kingston',
+    category: 'venue', city: 'Kingston', province: 'ON',
+    address: 'Kingston, ON', url: 'https://www.thefunzonekingston.com/parties-events/',
+    hours: 'Daily 10am-7pm', pricePerEvent: 300, priceDisplay: '$300',
+    commuteMins: 15, commuteKm: 8, rating: 4.4, ratingCount: 112,
+    emoji: '🎮', color: '#38B2AC',
+    guestCountMin: 8, guestCountMax: 40,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: true,
+    description: 'Kingston\'s favourite indoor play space with climbing structures, ball pits, and party rooms. Affordable packages with food options.',
+    scoreBreakdown: { cost: 90, commute: 88, coverage: 78, rating: 88, extras: 80 }
+  },
+  {
+    id: 'kv2', name: 'Splitsville Kingston', provider: 'Splitsville Entertainment',
+    category: 'venue', city: 'Kingston', province: 'ON',
+    address: 'Kingston, ON', url: 'https://www.splitsville.ca/kingston-bowling/birthday-parties',
+    hours: 'Daily 11am-11pm', pricePerEvent: 350, priceDisplay: '$350',
+    commuteMins: 18, commuteKm: 12, rating: 4.5, ratingCount: 88,
+    emoji: '🎳', color: '#ED8936',
+    guestCountMin: 8, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday', 'Graduation'],
+    availability: true,
+    description: 'Upscale bowling and entertainment complex. Birthday packages include lanes, private party area, and a customizable food & drinks menu.',
+    scoreBreakdown: { cost: 86, commute: 84, coverage: 80, rating: 90, extras: 84 }
+  },
+
+  // ---- MONTREAL VENUES ----
+  {
+    id: 'mv1', name: 'Centre FUNtastique', provider: 'FUNtastique',
+    category: 'venue', city: 'Montreal', province: 'QC',
+    address: 'Montreal, QC', url: 'https://funtastique.ca/',
+    hours: 'Daily 10am-8pm', pricePerEvent: 400, priceDisplay: '$400',
+    commuteMins: 22, commuteKm: 14, rating: 4.6, ratingCount: 198,
+    emoji: '🎠', color: '#9F7AEA',
+    guestCountMin: 10, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: true,
+    description: 'Montreal\'s popular family entertainment venue with inflatable parks, trampolines, and fully equipped party rooms. Bilingual staff.',
+    scoreBreakdown: { cost: 85, commute: 80, coverage: 82, rating: 92, extras: 85 }
+  },
+  {
+    id: 'mv2', name: 'Les Trois Monkeys', provider: 'Les Trois Monkeys',
+    category: 'venue', city: 'Montreal', province: 'QC',
+    address: 'Montreal, QC', url: 'https://lestroismonkeys.com/parties-events/',
+    hours: 'Daily 10am-7pm', pricePerEvent: 350, priceDisplay: '$350',
+    commuteMins: 20, commuteKm: 12, rating: 4.5, ratingCount: 143,
+    emoji: '🐒', color: '#6B46C1',
+    guestCountMin: 8, guestCountMax: 50,
+    eventTypes: ['Birthday', 'Baby Shower'],
+    availability: true,
+    description: 'Jungle-themed indoor playground with a dedicated party area. Unique atmosphere with enthusiastic staff and comprehensive party packages.',
+    scoreBreakdown: { cost: 86, commute: 82, coverage: 80, rating: 90, extras: 82 }
+  },
+
+  // ---- OTTAWA/EASTERN ENTERTAINMENT ----
+  {
+    id: 'oe1', name: 'Zoum Zoum Party', provider: 'Zoum Zoum Party',
+    category: 'entertainment', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://www.zoumzoumparty.ca/',
+    hours: 'By Appointment', pricePerEvent: 220, priceDisplay: '$220',
+    commuteMins: 20, commuteKm: 12, rating: 4.5, ratingCount: 78,
+    emoji: '🎉', color: '#ED8936',
+    guestCountMin: 5, guestCountMax: 50,
+    eventTypes: ['Birthday', 'Baby Shower', 'Holiday'],
+    availability: true,
+    description: 'Ottawa entertainment specialists offering bilingual (French/English) party shows, face painting, and balloon artistry.',
+    scoreBreakdown: { cost: 90, commute: 82, coverage: 78, rating: 90, extras: 82 }
+  },
+  {
+    id: 'oe2', name: 'Goopee the Clown', provider: 'Goopee Entertainment',
+    category: 'entertainment', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa/Kingston, ON', url: 'http://www.goopee.com/',
+    hours: 'By Appointment', pricePerEvent: 200, priceDisplay: '$200',
+    commuteMins: 25, commuteKm: 16, rating: 4.3, ratingCount: 54,
+    emoji: '🤹', color: '#38B2AC',
+    guestCountMin: 5, guestCountMax: 40,
+    eventTypes: ['Birthday', 'Holiday'],
+    availability: true,
+    description: 'Classic clown performances serving Ottawa and Kingston regions. Magic, juggling, balloon animals, and interactive comedy routines.',
+    scoreBreakdown: { cost: 92, commute: 78, coverage: 72, rating: 86, extras: 76 }
+  },
+  {
+    id: 'oe3', name: 'Mad Science Ottawa', provider: 'Mad Science Group',
+    category: 'entertainment', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://ottawa.madscience.org/',
+    hours: 'By Appointment', pricePerEvent: 280, priceDisplay: '$280',
+    commuteMins: 22, commuteKm: 14, rating: 4.7, ratingCount: 112,
+    emoji: '🔬', color: '#9F7AEA',
+    guestCountMin: 8, guestCountMax: 40,
+    eventTypes: ['Birthday', 'Corporate'],
+    availability: true,
+    description: 'Exciting science-themed party entertainment with live experiments, rocket launches, and hands-on STEM activities. Educational and thrilling.',
+    scoreBreakdown: { cost: 88, commute: 80, coverage: 82, rating: 94, extras: 90 }
+  },
+
+  // ---- OTTAWA/KINGSTON RENTALS ----
+  {
+    id: 'or1', name: 'Partytime Inflatables', provider: 'Partytime Inflatables',
+    category: 'rentals', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://www.partytimeinflatables.ca/',
+    hours: 'Daily 7am-8pm', pricePerEvent: 220, priceDisplay: '$220',
+    commuteMins: 25, commuteKm: 18, rating: 4.4, ratingCount: 96,
+    emoji: '🏠', color: '#6B46C1',
+    guestCountMin: 5, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday'],
+    availability: true,
+    description: 'Ottawa\'s trusted inflatable rental company with bouncy castles, obstacle courses, and combo units. Setup and takedown included.',
+    scoreBreakdown: { cost: 92, commute: 78, coverage: 78, rating: 88, extras: 82 }
+  },
+  {
+    id: 'or2', name: 'Runamok Amusements', provider: 'Runamok Amusements',
+    category: 'rentals', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa/Kingston, ON', url: 'https://www.runamokamusements.com/',
+    hours: 'By Appointment', pricePerEvent: 350, priceDisplay: '$350',
+    commuteMins: 30, commuteKm: 22, rating: 4.6, ratingCount: 68,
+    emoji: '🎡', color: '#ED8936',
+    guestCountMin: 10, guestCountMax: 200,
+    eventTypes: ['Birthday', 'Corporate', 'Holiday', 'Graduation'],
+    availability: true,
+    description: 'Carnival game rentals, midway equipment, and amusement rides for large events. Perfect for school fairs, corporate picnics, and festivals.',
+    scoreBreakdown: { cost: 82, commute: 70, coverage: 88, rating: 92, extras: 90 }
+  },
+  {
+    id: 'or3', name: 'Lucky Inflatables', provider: 'Lucky Inflatables',
+    category: 'rentals', city: 'Kingston', province: 'ON',
+    address: 'Kingston, ON', url: 'https://www.luckyinflatables.com/',
+    hours: 'Daily 8am-7pm', pricePerEvent: 180, priceDisplay: '$180',
+    commuteMins: 20, commuteKm: 12, rating: 4.3, ratingCount: 44,
+    emoji: '🍀', color: '#38B2AC',
+    guestCountMin: 5, guestCountMax: 60,
+    eventTypes: ['Birthday', 'Holiday'],
+    availability: true,
+    description: 'Kingston\'s affordable inflatable rental service. Wide selection of bounce houses and water slides at competitive prices.',
+    scoreBreakdown: { cost: 93, commute: 82, coverage: 72, rating: 86, extras: 76 }
+  },
+
+  // ---- OTTAWA SUPPLIES / DECORATIONS ----
+  {
+    id: 'os1', name: 'Cody Party Ottawa', provider: 'Cody Party',
+    category: 'decorations', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://codypartyottawa.com/',
+    hours: 'Mon-Sat 9am-7pm', pricePerEvent: 130, priceDisplay: '$130',
+    commuteMins: 15, commuteKm: 8, rating: 4.4, ratingCount: 122,
+    emoji: '🎁', color: '#9F7AEA',
+    guestCountMin: 5, guestCountMax: 200,
+    eventTypes: ['Birthday', 'Baby Shower', 'Anniversary', 'Holiday'],
+    availability: true,
+    description: 'Ottawa\'s go-to party supply store with a wide selection of themed decorations, costumes, and balloon services.',
+    scoreBreakdown: { cost: 94, commute: 88, coverage: 82, rating: 88, extras: 82 }
+  },
+  {
+    id: 'os2', name: 'Jolista', provider: 'Jolista Party Boutique',
+    category: 'decorations', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://jolista.ca/',
+    hours: 'By Appointment', pricePerEvent: 180, priceDisplay: '$180',
+    commuteMins: 18, commuteKm: 11, rating: 4.7, ratingCount: 66,
+    emoji: '🌈', color: '#6B46C1',
+    guestCountMin: 5, guestCountMax: 100,
+    eventTypes: ['Birthday', 'Baby Shower', 'Wedding'],
+    availability: true,
+    description: 'Custom party styling and decoration service. Curated party boxes, styled tablescape rentals, and full event decoration packages.',
+    scoreBreakdown: { cost: 90, commute: 85, coverage: 86, rating: 94, extras: 88 }
+  },
+  {
+    id: 'os3', name: 'Fiesta Ottawa Balloons', provider: 'Fiesta Ottawa',
+    category: 'decorations', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://fiestaottawaballoons.com/',
+    hours: 'By Appointment', pricePerEvent: 160, priceDisplay: '$160',
+    commuteMins: 20, commuteKm: 13, rating: 4.5, ratingCount: 54,
+    emoji: '🎈', color: '#ED8936',
+    guestCountMin: 5, guestCountMax: 200,
+    eventTypes: ['Birthday', 'Wedding', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Custom balloon arrangements and installations for all events. Organic balloon arches, columns, and centrepieces delivered to your venue.',
+    scoreBreakdown: { cost: 91, commute: 82, coverage: 84, rating: 90, extras: 84 }
+  },
+
+  // ---- OTTAWA/KINGSTON CAKES ----
+  {
+    id: 'oc1', name: 'Fancy Cakes', provider: 'Fancy Cakes Ottawa',
+    category: 'cakes', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://fancycakes.ca/',
+    hours: 'By Appointment', pricePerEvent: 150, priceDisplay: 'from $150',
+    commuteMins: 20, commuteKm: 12, rating: 4.6, ratingCount: 134,
+    emoji: '🎂', color: '#38B2AC',
+    guestCountMin: 5, guestCountMax: 100,
+    eventTypes: ['Birthday', 'Wedding', 'Baby Shower', 'Anniversary'],
+    availability: true,
+    description: 'Ottawa custom cake studio specializing in fondant artistry, buttercream designs, and dietary-friendly options (vegan, gluten-free).',
+    scoreBreakdown: { cost: 90, commute: 82, coverage: 86, rating: 92, extras: 88 }
+  },
+  {
+    id: 'oc2', name: 'Batter Up Bakery', provider: 'Batter Up Bakery',
+    category: 'cakes', city: 'Ottawa', province: 'ON',
+    address: 'Ottawa, ON', url: 'https://www.batterupbakery.ca/',
+    hours: 'Tue-Sat 9am-5pm', pricePerEvent: 120, priceDisplay: 'from $120',
+    commuteMins: 22, commuteKm: 14, rating: 4.5, ratingCount: 88,
+    emoji: '🥎', color: '#9F7AEA',
+    guestCountMin: 5, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Baby Shower', 'Holiday'],
+    availability: true,
+    description: 'Friendly neighbourhood bakery offering custom cakes, cupcake sets, and dessert boxes. Known for delicious flavours and fair pricing.',
+    scoreBreakdown: { cost: 93, commute: 80, coverage: 80, rating: 90, extras: 82 }
+  },
+  {
+    id: 'oc3', name: 'Warrior Cakes', provider: 'Warrior Cakes',
+    category: 'cakes', city: 'Kingston', province: 'ON',
+    address: 'Kingston, ON', url: 'https://warriorcakes.com/',
+    hours: 'By Appointment', pricePerEvent: 130, priceDisplay: 'from $130',
+    commuteMins: 18, commuteKm: 10, rating: 4.8, ratingCount: 62,
+    emoji: '⚔️', color: '#6B46C1',
+    guestCountMin: 5, guestCountMax: 80,
+    eventTypes: ['Birthday', 'Anniversary', 'Graduation'],
+    availability: true,
+    description: 'Kingston\'s boutique custom cake maker specializing in bold, character-themed and dramatic cake designs. Loved by sports fans and gamers.',
+    scoreBreakdown: { cost: 92, commute: 86, coverage: 84, rating: 96, extras: 88 }
+  }
+];
+
+
+// ============================================================
+// STATE
+// ============================================================
+const categories = [
+  { id: 'venue', label: 'Venues', emoji: '🏛️' },
+  { id: 'catering', label: 'Catering', emoji: '🍽️' },
+  { id: 'dj', label: 'DJs & Music', emoji: '🎵' },
+  { id: 'photography', label: 'Photography', emoji: '📷' },
+  { id: 'decorations', label: 'Decorations', emoji: '🎨' },
+  { id: 'entertainment', label: 'Entertainment', emoji: '🎪' },
+  { id: 'cakes', label: 'Cake & Desserts', emoji: '🎂' },
+  { id: 'rentals', label: 'Rentals', emoji: '🎈' }
+];
+
+let selectedCategories = [];
+let compareList = [];
+let currentView = 'search';
+let filteredVendors = [];
+let activeDetailId = null;
+let maxBudget = 5000;
+let smartSearchTerm = '';
+
+let events = [{ id: 1, name: 'Event 1', type: 'Birthday', budget: 2000 }];
+let activeEventId = 0; // 0 = all
+let plannedVendors = []; // { vendorId, eventId }
+
+// ============================================================
+// INIT
+// ============================================================
+function init() {
+  renderCatGrid();
+  renderEventTabs();
+  filteredVendors = [...vendors];
+  sortAndRender();
+  updateStats(filteredVendors);
+  renderPlanner();
+}
+
+// ============================================================
+// CATEGORY GRID
+// ============================================================
+function renderCatGrid() {
+  const grid = document.getElementById('catGrid');
+  grid.innerHTML = categories.map(cat => `
+    <div class="cat-item${selectedCategories.includes(cat.id) ? ' selected' : ''}" onclick="toggleCategory('${cat.id}')">
+      <span class="cat-emoji">${cat.emoji}</span>
+      <span>${cat.label}</span>
+    </div>
+  `).join('');
+}
+
+function toggleCategory(id) {
+  if (selectedCategories.includes(id)) {
+    selectedCategories = selectedCategories.filter(c => c !== id);
+  } else {
+    selectedCategories.push(id);
+  }
+  renderCatGrid();
+  const btn = document.getElementById('compareInterestsBtn');
+  if (selectedCategories.length >= 2) btn.classList.add('show');
+  else btn.classList.remove('show');
+  filterVendors();
+}
+
+function compareSelected() {
+  if (selectedCategories.length < 2) return;
+  const catVendors = vendors.filter(v => selectedCategories.includes(v.category));
+  const top = catVendors.sort((a,b) => calcValueScore(b) - calcValueScore(a)).slice(0, 4);
+  compareList = top.map(v => v.id);
+  updateCompareBar();
+  showCompare();
+}
+
+// ============================================================
+// BUDGET
+// ============================================================
+function updateBudget(val) {
+  maxBudget = parseInt(val);
+  document.getElementById('budgetDisplay').textContent = '$' + Number(val).toLocaleString();
+  filterVendors();
+}
+
+// ============================================================
+// SMART SEARCH
+// ============================================================
+const searchSuggestions = [
+  { text: 'Birthday party venues', emoji: '🏛️', cat: 'venue' },
+  { text: 'Wedding venues', emoji: '💒', cat: 'venue' },
+  { text: 'Corporate event venues', emoji: '🏢', cat: 'venue' },
+  { text: 'Kids entertainment', emoji: '🎪', cat: 'entertainment' },
+  { text: 'Clowns & characters', emoji: '🤡', cat: 'entertainment' },
+  { text: 'Science party shows', emoji: '🔬', cat: 'entertainment' },
+  { text: 'Balloon decorations', emoji: '🎈', cat: 'decorations' },
+  { text: 'Party supplies & decor', emoji: '🎊', cat: 'decorations' },
+  { text: 'Custom cakes', emoji: '🎂', cat: 'cakes' },
+  { text: 'Dessert tables', emoji: '🍰', cat: 'cakes' },
+  { text: 'Bouncy castle rentals', emoji: '🏠', cat: 'rentals' },
+  { text: 'Inflatable rentals', emoji: '🎈', cat: 'rentals' },
+  { text: 'Photo booth rentals', emoji: '📸', cat: 'rentals' },
+];
+
+function handleSmartSearch(val) {
+  smartSearchTerm = val;
+  const drop = document.getElementById('suggestionsDropdown');
+  if (!val.trim()) { drop.classList.remove('show'); drop.innerHTML = ''; return; }
+  const matches = searchSuggestions.filter(s => s.text.toLowerCase().includes(val.toLowerCase()));
+  const vendorMatches = vendors.filter(v => v.name.toLowerCase().includes(val.toLowerCase())).slice(0, 3);
+  if (matches.length === 0 && vendorMatches.length === 0) { drop.classList.remove('show'); return; }
+  drop.innerHTML = [
+    ...matches.map(s => `<div class="suggestion-item" onclick="applySuggestion('${s.cat}','${s.text}')">${s.emoji} ${s.text}</div>`),
+    ...vendorMatches.map(v => `<div class="suggestion-item" onclick="openDetail('${v.id}')">${v.emoji} ${v.name} <span style="color:var(--text-muted);font-size:0.78rem;margin-left:4px">${v.city}</span></div>`)
+  ].join('');
+  drop.classList.add('show');
+}
+
+function applySuggestion(cat, text) {
+  document.getElementById('smartSearch').value = text;
+  closeSuggestions();
+  selectedCategories = [cat];
+  renderCatGrid();
+  filterVendors();
+}
+
+function applySmartSearch() {
+  closeSuggestions();
+  filterVendors();
+}
+
+function closeSuggestions() {
+  document.getElementById('suggestionsDropdown').classList.remove('show');
+}
+
+function quickFilter(cat) {
+  selectedCategories = [cat];
+  renderCatGrid();
+  filterVendors();
+  document.getElementById('searchView').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ============================================================
+// FILTER
+// ============================================================
+function filterVendors() {
+  const city = document.getElementById('cityFilter').value;
+  const eventType = document.getElementById('eventType').value;
+  const guestCount = parseInt(document.getElementById('guestCount').value);
+  const radius = parseInt(document.getElementById('radiusFilter').value);
+  const searchTerm = document.getElementById('smartSearch').value.toLowerCase().trim();
+
+  filteredVendors = vendors.filter(v => {
+    if (selectedCategories.length > 0 && !selectedCategories.includes(v.category)) return false;
+    if (city && v.city !== city) return false;
+    if (eventType && !v.eventTypes.includes(eventType)) return false;
+    if (v.guestCountMax < guestCount / 2) return false;
+    if (v.commuteKm > radius) return false;
+    if (v.pricePerEvent > maxBudget && maxBudget > 0) return false;
+    if (searchTerm) {
+      const hay = (v.name + ' ' + v.provider + ' ' + v.category + ' ' + v.city + ' ' + v.description).toLowerCase();
+      if (!hay.includes(searchTerm)) return false;
+    }
+    return true;
+  });
+
+  sortAndRender();
+  updateStats(filteredVendors);
+}
+
+function sortAndRender() {
+  const sort = document.getElementById('sortSelect').value;
+  let sorted = [...filteredVendors];
+  if (sort === 'value') sorted.sort((a, b) => calcValueScore(b) - calcValueScore(a));
+  else if (sort === 'price-low') sorted.sort((a, b) => a.pricePerEvent - b.pricePerEvent);
+  else if (sort === 'price-high') sorted.sort((a, b) => b.pricePerEvent - a.pricePerEvent);
+  else if (sort === 'distance') sorted.sort((a, b) => a.commuteKm - b.commuteKm);
+  else if (sort === 'rating') sorted.sort((a, b) => b.rating - a.rating);
+  renderVendors(sorted);
+}
+
+// ============================================================
+// STATS
+// ============================================================
+function updateStats(list) {
+  document.getElementById('statVendors').textContent = list.length;
+  if (list.length === 0) {
+    document.getElementById('statAvgCost').textContent = '—';
+    document.getElementById('statAvgDist').textContent = '—';
+    document.getElementById('statBestVal').textContent = '—';
+    document.getElementById('resultCount').textContent = '0 results';
+    return;
+  }
+  const avgCost = Math.round(list.reduce((s, v) => s + v.pricePerEvent, 0) / list.length);
+  const avgDist = Math.round(list.reduce((s, v) => s + v.commuteKm, 0) / list.length);
+  const bestVal = Math.max(...list.map(v => calcValueScore(v)));
+  document.getElementById('statAvgCost').textContent = '$' + avgCost.toLocaleString();
+  document.getElementById('statAvgDist').textContent = avgDist + ' km';
+  document.getElementById('statBestVal').textContent = bestVal;
+  document.getElementById('resultCount').textContent = list.length + ' result' + (list.length !== 1 ? 's' : '');
+}
+
+// ============================================================
+// VALUE SCORE
+// ============================================================
+function calcValueScore(v) {
+  const b = v.scoreBreakdown;
+  return Math.round(b.cost * 0.4 + b.commute * 0.25 + b.coverage * 0.15 + b.rating * 0.10 + b.extras * 0.10);
+}
+
+function getScoreClass(score) {
+  if (score >= 75) return 'score-high';
+  if (score >= 55) return 'score-med';
+  return 'score-low';
+}
+
+// ============================================================
+// RENDER CARDS
+// ============================================================
+function renderVendors(list) {
+  const grid = document.getElementById('cardsGrid');
+  if (list.length === 0) {
+    grid.innerHTML = `<div class="no-results"><div class="nr-emoji">🔍</div><h3>No vendors found</h3><p>Try adjusting your filters or increasing your budget.</p></div>`;
+    return;
+  }
+  grid.innerHTML = list.map(v => {
+    const score = calcValueScore(v);
+    const scoreClass = getScoreClass(score);
+    const inCompare = compareList.includes(v.id);
+    const availDot = v.availability ? '<span class="avail-dot"></span>' : '<span class="avail-dot busy"></span>';
+    const availText = v.availability ? 'Available' : 'Check Availability';
+    return `
+    <div class="vendor-card" onclick="openDetail('${v.id}')">
+      <div class="card-image" style="background:linear-gradient(135deg,${v.color}22 0%,${v.color}44 100%)">${v.emoji}</div>
+      <div class="card-body">
+        <div class="card-name">${v.name}</div>
+        <div class="card-tags">
+          <span class="card-tag cat">${categories.find(c=>c.id===v.category)?.emoji || ''} ${categories.find(c=>c.id===v.category)?.label || v.category}</span>
+          <span class="card-tag">${v.city}, ${v.province}</span>
+          ${v.eventTypes.slice(0,2).map(et => `<span class="card-tag">${et}</span>`).join('')}
+        </div>
+        <div class="card-meta">
+          <span class="card-meta-item">⭐ ${v.rating} (${v.ratingCount})</span>
+          <span class="card-meta-item">👥 Up to ${v.guestCountMax} guests</span>
+          <span class="card-avail">${availDot} ${availText}</span>
+        </div>
+      </div>
+      <div class="card-right" onclick="event.stopPropagation()">
+        <div class="value-score-circle ${scoreClass}">
+          <span>${score}</span>
+          <span class="score-label">Value</span>
+        </div>
+        <div>
+          <div class="card-price">${v.priceDisplay}</div>
+          <div class="card-price-sub">per event</div>
+        </div>
+        <div class="card-distance">📍 ${v.commuteKm} km</div>
+        <div class="card-compare-wrap">
+          <input type="checkbox" id="cmp-${v.id}" ${inCompare ? 'checked' : ''} onclick="toggleCompare('${v.id}', this.checked)">
+          <label for="cmp-${v.id}">Compare</label>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ============================================================
+// COMPARE
+// ============================================================
+function toggleCompare(vendorId, checked) {
+  if (checked) {
+    if (compareList.length >= 4) {
+      alert('You can compare up to 4 vendors at a time.');
+      document.getElementById('cmp-' + vendorId).checked = false;
+      return;
+    }
+    compareList.push(vendorId);
+  } else {
+    compareList = compareList.filter(id => id !== vendorId);
+  }
+  updateCompareBar();
+}
+
+function updateCompareBar() {
+  const bar = document.getElementById('compareBarEl');
+  const items = document.getElementById('compareBarItems');
+  if (compareList.length === 0) { bar.classList.remove('show'); return; }
+  bar.classList.add('show');
+  items.innerHTML = compareList.map(id => {
+    const v = vendors.find(v => v.id === id);
+    return `<div class="compare-bar-item">${v.emoji} ${v.name} <span class="compare-bar-remove" onclick="removeCompare('${id}')">✕</span></div>`;
+  }).join('');
+}
+
+function removeCompare(id) {
+  compareList = compareList.filter(c => c !== id);
+  const cb = document.getElementById('cmp-' + id);
+  if (cb) cb.checked = false;
+  updateCompareBar();
+}
+
+function clearCompare() {
+  compareList.forEach(id => { const cb = document.getElementById('cmp-' + id); if (cb) cb.checked = false; });
+  compareList = [];
+  updateCompareBar();
+}
+
+// ============================================================
+// COMPARE VIEW
+// ============================================================
+function showCompare() {
+  if (compareList.length < 2) { alert('Select at least 2 vendors to compare.'); return; }
+  currentView = 'compare';
+  document.getElementById('searchView').style.display = 'none';
+  document.getElementById('compareView').style.display = 'block';
+  document.getElementById('plannerView').style.display = 'none';
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('compareTab').classList.add('active');
+  document.getElementById('heroSection').style.display = 'none';
+  renderCompare();
+}
+
+function renderCompare() {
+  const vList = compareList.map(id => vendors.find(v => v.id === id)).filter(Boolean);
+  const rows = [
+    { label: 'Category', fn: v => categories.find(c=>c.id===v.category)?.label || v.category },
+    { label: 'City', fn: v => v.city + ', ' + v.province },
+    { label: 'Starting Price', fn: v => v.priceDisplay, isCost: true },
+    { label: 'Distance', fn: v => v.commuteKm + ' km', isDist: true },
+    { label: 'Rating', fn: v => '⭐ ' + v.rating + ' (' + v.ratingCount + ')', isRating: true },
+    { label: 'Max Guests', fn: v => v.guestCountMax + ' guests' },
+    { label: 'Event Types', fn: v => v.eventTypes.join(', ') },
+    { label: 'Availability', fn: v => v.availability ? '✅ Available' : '⚠️ Check' },
+    { label: 'Value Score', fn: v => calcValueScore(v), isScore: true },
+    { label: 'Cost Score', fn: v => v.scoreBreakdown.cost + '/100' },
+    { label: 'Location Score', fn: v => v.scoreBreakdown.commute + '/100' },
+    { label: 'Coverage Score', fn: v => v.scoreBreakdown.coverage + '/100' },
+    { label: 'Rating Score', fn: v => v.scoreBreakdown.rating + '/100' },
+    { label: 'Extras Score', fn: v => v.scoreBreakdown.extras + '/100' },
+  ];
+  let html = `<table class="compare-table"><thead><tr><th>Feature</th>`;
+  vList.forEach(v => { html += `<th>${v.emoji} ${v.name}</th>`; });
+  html += `</tr></thead><tbody>`;
+  rows.forEach(row => {
+    const vals = vList.map(v => row.fn(v));
+    html += `<tr><td class="row-label">${row.label}</td>`;
+    vals.forEach((val, i) => {
+      let cls = '';
+      if (row.isScore) {
+        const scores = vList.map(v => calcValueScore(v));
+        if (val === Math.max(...scores)) cls = ' class="best"';
+      }
+      if (row.isRating) {
+        const ratings = vList.map(v => v.rating);
+        if (vList[i].rating === Math.max(...ratings)) cls = ' class="best"';
+      }
+      if (row.isCost) {
+        const prices = vList.map(v => v.pricePerEvent);
+        if (vList[i].pricePerEvent === Math.min(...prices)) cls = ' class="best"';
+      }
+      if (row.isDist) {
+        const dists = vList.map(v => v.commuteKm);
+        if (vList[i].commuteKm === Math.min(...dists)) cls = ' class="best"';
+      }
+      html += `<td${cls}>${val}</td>`;
+    });
+    html += `</tr>`;
+  });
+  html += `</tbody></table>`;
+  document.getElementById('compareTableWrap').innerHTML = html;
+}
+
+// ============================================================
+// DETAIL MODAL
+// ============================================================
+function openDetail(id) {
+  const v = vendors.find(v => v.id === id);
+  if (!v) return;
+  activeDetailId = id;
+  document.getElementById('modalEmoji').textContent = v.emoji;
+  document.getElementById('modalName').textContent = v.name;
+  document.getElementById('modalProvider').textContent = v.provider + ' · ' + v.city + ', ' + v.province;
+  document.getElementById('modalVisitBtn').href = v.url;
+
+  const cat = categories.find(c => c.id === v.category);
+  document.getElementById('modalInfoGrid').innerHTML = [
+    { label: 'Category', val: cat?.emoji + ' ' + cat?.label },
+    { label: 'Starting Price', val: v.priceDisplay },
+    { label: 'Distance', val: v.commuteKm + ' km away' },
+    { label: 'Rating', val: '⭐ ' + v.rating + ' (' + v.ratingCount + ' reviews)' },
+    { label: 'Guest Capacity', val: v.guestCountMin + '–' + v.guestCountMax + ' guests' },
+    { label: 'Event Types', val: v.eventTypes.join(', ') },
+    { label: 'Hours', val: v.hours },
+    { label: 'Availability', val: v.availability ? '✅ Available' : '⚠️ Contact to confirm' },
+  ].map(item => `
+    <div class="modal-info-item">
+      <div class="modal-info-label">${item.label}</div>
+      <div class="modal-info-val">${item.val}</div>
+    </div>
+  `).join('');
+
+  const score = calcValueScore(v);
+  const bars = [
+    { label: 'Cost Value', val: v.scoreBreakdown.cost, weight: '40%' },
+    { label: 'Location', val: v.scoreBreakdown.commute, weight: '25%' },
+    { label: 'Coverage', val: v.scoreBreakdown.coverage, weight: '15%' },
+    { label: 'Rating', val: v.scoreBreakdown.rating, weight: '10%' },
+    { label: 'Extras', val: v.scoreBreakdown.extras, weight: '10%' },
+  ];
+  document.getElementById('modalScoreBars').innerHTML = `
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+      <div class="value-score-circle ${getScoreClass(score)}" style="width:60px;height:60px;font-size:1.2rem">${score}<span class="score-label">Value</span></div>
+      <div style="font-size:0.85rem;color:var(--text-muted);font-weight:600">Overall Value Score<br><span style="font-size:0.78rem">Weighted composite of 5 factors</span></div>
+    </div>
+    ${bars.map(b => `
+    <div class="score-bar-row">
+      <div class="score-bar-label">${b.label} <span style="font-size:0.7rem;opacity:0.6">(${b.weight})</span></div>
+      <div class="score-bar-track"><div class="score-bar-fill" style="width:${b.val}%"></div></div>
+      <div class="score-bar-val">${b.val}</div>
+    </div>`).join('')}
+  `;
+  document.getElementById('modalDesc').textContent = v.description;
+  document.getElementById('modalOverlay').classList.add('show');
+}
+
+function closeModal(event) {
+  if (!event || event.target === document.getElementById('modalOverlay')) {
+    document.getElementById('modalOverlay').classList.remove('show');
+    activeDetailId = null;
+  }
+}
+
+function addToPlanner() {
+  if (!activeDetailId) return;
+  const already = plannedVendors.find(p => p.vendorId === activeDetailId);
+  if (already) { alert('This vendor is already in your planner!'); return; }
+  plannedVendors.push({ vendorId: activeDetailId, eventId: activeEventId || 1 });
+  closeModal();
+  showPlanner();
+}
+
+// ============================================================
+// PLANNER
+// ============================================================
+function showPlanner() {
+  currentView = 'planner';
+  document.getElementById('searchView').style.display = 'none';
+  document.getElementById('compareView').style.display = 'none';
+  document.getElementById('plannerView').style.display = 'block';
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('plannerTab').classList.add('active');
+  document.getElementById('heroSection').style.display = 'none';
+  renderPlanner();
+}
+
+function showSearch() {
+  currentView = 'search';
+  document.getElementById('searchView').style.display = 'block';
+  document.getElementById('compareView').style.display = 'none';
+  document.getElementById('plannerView').style.display = 'none';
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector('.nav-tab').classList.add('active');
+  document.getElementById('heroSection').style.display = 'block';
+}
+
+function renderPlanner() {
+  renderEventTabs();
+  renderBudgetSummary();
+  renderCategoryChart();
+  renderPlannedVendors();
+}
+
+function renderEventTabs() {
+  const tabsEl = document.getElementById('eventTabs');
+  if (!tabsEl) return;
+  tabsEl.innerHTML = `
+    <button class="event-tab${activeEventId===0?' active':''}" onclick="setActiveEvent(0)">All Events</button>
+    ${events.map(e => `<button class="event-tab${activeEventId===e.id?' active':''}" onclick="setActiveEvent(${e.id})">${e.name}</button>`).join('')}
+    <button class="event-tab-add" onclick="addEvent()">+ Add Event</button>
+  `;
+}
+
+function setActiveEvent(id) {
+  activeEventId = id;
+  renderEventTabs();
+  renderBudgetSummary();
+  renderCategoryChart();
+  renderPlannedVendors();
+}
+
+function addEvent() {
+  const newId = events.length + 1;
+  events.push({ id: newId, name: 'Event ' + newId, type: 'Birthday', budget: 2000 });
+  setActiveEvent(newId);
+}
+
+function getActiveVendors() {
+  if (activeEventId === 0) return plannedVendors;
+  return plannedVendors.filter(p => p.eventId === activeEventId);
+}
+
+function renderBudgetSummary() {
+  const el = document.getElementById('budgetSummary');
+  if (!el) return;
+  const active = getActiveVendors();
+  const totalSpent = active.reduce((s, p) => {
+    const v = vendors.find(v => v.id === p.vendorId);
+    return s + (v ? v.pricePerEvent : 0);
+  }, 0);
+  const totalBudget = activeEventId === 0
+    ? events.reduce((s, e) => s + e.budget, 0)
+    : (events.find(e => e.id === activeEventId)?.budget || 2000);
+  const remaining = totalBudget - totalSpent;
+  const overClass = remaining < 0 ? ' over' : ' under';
+  el.innerHTML = `
+    <div class="budget-summary-row">
+      <span class="budget-summary-label">Total Budget</span>
+      <span class="budget-summary-val">$${totalBudget.toLocaleString()}</span>
+    </div>
+    <div class="budget-summary-row">
+      <span class="budget-summary-label">Vendors Planned</span>
+      <span class="budget-summary-val">${active.length} vendor${active.length !== 1 ? 's' : ''}</span>
+    </div>
+    <div class="budget-summary-row">
+      <span class="budget-summary-label">Amount Allocated</span>
+      <span class="budget-summary-val">$${totalSpent.toLocaleString()}</span>
+    </div>
+    <div class="budget-summary-row">
+      <span class="budget-summary-label">Remaining</span>
+      <span class="budget-summary-val${overClass}">$${Math.abs(remaining).toLocaleString()}${remaining < 0 ? ' over' : ' left'}</span>
+    </div>
+  `;
+}
+
+function renderCategoryChart() {
+  const el = document.getElementById('categoryChart');
+  if (!el) return;
+  const active = getActiveVendors();
+  const totalBudget = activeEventId === 0
+    ? events.reduce((s, e) => s + e.budget, 0)
+    : (events.find(e => e.id === activeEventId)?.budget || 2000);
+
+  const catAllocations = [
+    { id: 'venue', label: 'Venue', pct: 40, color: '#6B46C1' },
+    { id: 'catering', label: 'Catering', pct: 25, color: '#38B2AC' },
+    { id: 'entertainment', label: 'Entertainment', pct: 15, color: '#ED8936' },
+    { id: 'decorations', label: 'Decor', pct: 10, color: '#9F7AEA' },
+    { id: 'photography', label: 'Photo/Video', pct: 10, color: '#553C9A' },
+  ];
+
+  const spent = {};
+  active.forEach(p => {
+    const v = vendors.find(v => v.id === p.vendorId);
+    if (!v) return;
+    spent[v.category] = (spent[v.category] || 0) + v.pricePerEvent;
+  });
+
+  el.innerHTML = catAllocations.map(cat => {
+    const recommended = Math.round(totalBudget * cat.pct / 100);
+    const actualSpent = spent[cat.id] || 0;
+    const fillPct = Math.min(100, Math.round((actualSpent / recommended) * 100));
+    const fillDisplay = Math.min(100, Math.round((recommended / totalBudget) * 100));
+    return `
+    <div class="chart-bar-row">
+      <div class="chart-bar-label">${cat.label}</div>
+      <div class="chart-bar-track">
+        <div class="chart-bar-fill" style="width:${fillDisplay}%;background:${cat.color}">
+          ${cat.pct}%
+        </div>
+      </div>
+      <div class="chart-bar-val">$${recommended.toLocaleString()}<br><span style="font-size:0.72rem;color:var(--text-muted)">$${actualSpent} spent</span></div>
+    </div>`;
+  }).join('');
+}
+
+function renderPlannedVendors() {
+  const el = document.getElementById('plannedVendorsList');
+  if (!el) return;
+  const active = getActiveVendors();
+  if (active.length === 0) {
+    el.innerHTML = `<div class="planner-empty">🎉 No vendors planned yet.<br>Add vendors from the search to start building your event!</div>`;
+    return;
+  }
+  el.innerHTML = active.map(p => {
+    const v = vendors.find(v => v.id === p.vendorId);
+    if (!v) return '';
+    const cat = categories.find(c => c.id === v.category);
+    return `
+    <div class="planned-vendor-row">
+      <div class="planned-vendor-emoji">${v.emoji}</div>
+      <div class="planned-vendor-info">
+        <div class="planned-vendor-name">${v.name}</div>
+        <div class="planned-vendor-cat">${cat?.emoji || ''} ${cat?.label || v.category} · ${v.city}</div>
+      </div>
+      <div class="planned-vendor-price">${v.priceDisplay}</div>
+      <div class="planned-vendor-remove" onclick="removePlannedVendor('${p.vendorId}',${p.eventId})">🗑️</div>
+    </div>`;
+  }).join('');
+}
+
+function removePlannedVendor(vendorId, eventId) {
+  plannedVendors = plannedVendors.filter(p => !(p.vendorId === vendorId && p.eventId === eventId));
+  renderPlanner();
+}
+
+// ============================================================
+// INIT ON LOAD
+// ============================================================
+document.addEventListener('DOMContentLoaded', init);
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('mobile-open');
+  document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
+}
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.querySelector('.hamburger')?.classList.remove('open');
+    document.querySelector('.nav-links')?.classList.remove('mobile-open');
+    document.body.style.overflow = '';
+  });
+});
+</script>
+</body>
+</html>
